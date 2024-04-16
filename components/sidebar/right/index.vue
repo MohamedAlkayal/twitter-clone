@@ -16,8 +16,8 @@ const whatsHappeningItems = reactive([
 ])
 const whoToFollowItems = reactive([
     {
-        name: 'Mohamed Alkayal',
-        handle: '@kayal',
+        name: 'Jhon Doe',
+        handle: '@jhondoe',
         image: 'https://picsum.photos/200/200',
     },
     {
@@ -34,7 +34,7 @@ const whoToFollowItems = reactive([
 </script>
 
 <template>
-    <div class="flex flex-col">
+    <div class="fixed top-0 my-4 w-1/5 flex flex-col">
         <!-- Preview Card: Whats happening -->
         <SidebarRightPreviewCard title="What's happening">
             <SidebarRightPreviewCardItem
@@ -66,7 +66,9 @@ const whoToFollowItems = reactive([
                             :alt="`${whoToFollow.name} Profile Picture`"
                         />
                         <div class="flex flex-col">
-                            <p class="font-semibold dark:text-gray-100 mb-2">
+                            <p
+                                class="font-semibold text-sm dark:text-gray-100 mb-2"
+                            >
                                 {{ whoToFollow.name }}
                             </p>
                             <p class="text-sm text-gray-600 dark:text-gray-300">

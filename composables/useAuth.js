@@ -82,7 +82,7 @@ export default () => {
 
     const initAuth = () => {
         return new Promise(async (resolve, reject) => {
-            // setIsAuthLoading(true)
+            setIsAuthLoading(true)
             try {
                 await refreshToken()
                 await getUser()
@@ -90,11 +90,9 @@ export default () => {
                 resolve(true)
             } catch (error) {
                 reject(error)
+            } finally {
+                setIsAuthLoading(false)
             }
-
-            // finally {
-            //     setIsAuthLoading(false)
-            // }
         })
     }
 

@@ -1,4 +1,7 @@
 <template>
+    <Head>
+        <Title>Login - Twitter</Title>
+    </Head>
     <AuthLoginForm />
 </template>
 

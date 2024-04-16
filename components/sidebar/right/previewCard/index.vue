@@ -11,7 +11,7 @@ const props = defineProps({
 
 <template>
     <div
-        class="m-2 border overflow-hidden rounded-2xl bg-gray-50 dark:bg-dim-700"
+        class="m-2 border overflow-hidden w-full rounded-2xl bg-gray-50 dark:bg-dim-700"
         :class="twitterBorderColor"
     >
         <h1

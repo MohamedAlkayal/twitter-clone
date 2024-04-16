@@ -1,15 +1,11 @@
 <template>
-    <div :class="{ dark: darkMode }">
-        <NuxtLayout>
-            <NuxtPage />
-        </NuxtLayout>
-    </div>
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
 </template>
 
 <script setup>
-const darkMode = ref(false)
 const { initAuth } = useAuth()
-
 onBeforeMount(() => {
     initAuth()
 })
