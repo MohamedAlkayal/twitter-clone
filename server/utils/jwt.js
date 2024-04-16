@@ -1,4 +1,5 @@
 import jwt from 'jsonwebtoken'
+import { parseCookies } from 'h3'
 
 const generateAccessToken = (user) => {
     const config = useRuntimeConfig()
@@ -47,8 +48,8 @@ export const generateTokens = (user) => {
 }
 
 export const sendRefreshToken = (event, token) => {
-    parseCookies(event, 'refresh_token', token, {
-        httpOnly: true,
-        sameSite: true,
-    })
+    event.res.setHeader(
+        'Set-Cookie',
+        `refresh_token=${token}; HttpOnly; SameSite=Strict`
+    )
 }
